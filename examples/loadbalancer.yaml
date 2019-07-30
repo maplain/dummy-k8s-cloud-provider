@@ -1,0 +1,31 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ironman
+spec:
+  selector:
+    app: hello
+    tier: frontend
+  ports:
+  - protocol: "TCP"
+    port: 80
+    targetPort: 80
+  type: LoadBalancer
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: loadbalancer
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: frontend
+    spec:
+      serviceAccountName: pks-networking-test-sa
+      containers:
+      - name: nginx
+        image: "nginxdemos/hello"
