@@ -47,7 +47,7 @@ I0730 16:24:54.784905   35148 controller_utils.go:1029] Waiting for caches to sy
 I0730 16:24:54.889495   35148 controller_utils.go:1036] Caches are synced for service controller
 ``` 
 
-open another shell,
+open another shell:
 ```shell
 kubectl create -f examples/loadbalancer.yaml
 ```
@@ -65,4 +65,3 @@ Then run:
 kubectl delete -f examples/loadbalancer.yaml
 ```
 to clean it up.
-# dummy-k8s-cloud-provider
