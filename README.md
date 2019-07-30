@@ -1,4 +1,4 @@
-# An Example Cloud provider
+# An Example Cloud Provider
 
 ## Cloud controller manager
 
