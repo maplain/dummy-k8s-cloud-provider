@@ -21,9 +21,12 @@ The project uses [Go modules](https://github.com/golang/go/wiki/Modules) and:
 * Requires Go 1.11+
 * Should not be cloned into the `$GOPATH`
 
-Assume you have a valid kubeconfig at ~/.kube/config.
+### Create a k8s cluster
+Refer to either [minikube](https://github.com/kubernetes/minikube) or [kind](https://github.com/kubernetes-sigs/kind) to create a local k8s cluster
 
 ### Try it out!
+Assume you have a valid kubeconfig at ~/.kube/config.
+
 ```shell
 export KUBECONFIG=~/.kube/config
 ➜  git:(master) ✗ ./cloud-controller-manager --authentication-kubeconfig=$KUBECONFIG  --authorization-kubeconfig=$KUBECONFIG --kubeconfig=$KUBECONFIG --cloud-config=examples/cloud-config
