@@ -68,3 +68,6 @@ Then run:
 kubectl delete -f examples/loadbalancer.yaml
 ```
 to clean it up.
+
+### Documents
+For more details, refer to this [Google Doc](https://docs.google.com/document/d/1Tz9llq1XY4lV4qwswbXDDYw8EB8vxhZcY5YBJBy9U0U/edit#)
